@@ -1,0 +1,40 @@
+{
+  "name": "stanford-dragon",
+  "version": "0.0.0",
+  "description": "The Stanford Dragon",
+  "main": "3.js",
+  "scripts": {
+    "prepublish": "node lib/compress.js",
+    "postinstall": "node lib/decompress.js && npm run build && npm run clean",
+    "build": "npm run res1 && npm run res2 && npm run res3 && npm run res4",
+    "res1": "node lib/build.js < models/dragon_vrip.ply > 1.js",
+    "res2": "node lib/build.js < models/dragon_vrip_res2.ply > 2.js",
+    "res3": "node lib/build.js < models/dragon_vrip_res3.ply > 3.js",
+    "res4": "node lib/build.js < models/dragon_vrip_res4.ply > 4.js",
+    "clean": "rm models/*.ply"
+  },
+  "author": "Hugh Kennedy <hughskennedy@gmail.com> (http://hughsk.io/)",
+  "dependencies": {
+    "parse-ply": "^0.1.0",
+    "map-limit": "0.0.0",
+    "glob": "^3.2.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hughsk/stanford-dragon.git"
+  },
+  "keywords": [
+    "dragon",
+    "3d",
+    "model",
+    "test",
+    "data",
+    "mesh",
+    "triangle",
+    "cells"
+  ],
+  "bugs": {
+    "url": "https://github.com/hughsk/stanford-dragon/issues"
+  },
+  "homepage": "https://github.com/hughsk/stanford-dragon"
+}
