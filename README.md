@@ -1,4 +1,4 @@
-# standford-dragon [![stable](http://hughsk.github.io/stability-badges/dist/stable.svg)](http://github.com/hughsk/stability-badges)
+# stanford-dragon [![stable](http://hughsk.github.io/stability-badges/dist/stable.svg)](http://github.com/hughsk/stability-badges)
 
 ![stanford dragon](http://imgur.com/d8r89j9.png)
 
