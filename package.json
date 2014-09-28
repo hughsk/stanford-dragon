@@ -5,13 +5,12 @@
   "main": "3.js",
   "scripts": {
     "prepublish": "node lib/compress.js",
-    "postinstall": "node lib/decompress.js && npm run build && npm run clean",
+    "postinstall": "npm run build",
     "build": "npm run res1 && npm run res2 && npm run res3 && npm run res4",
-    "res1": "node lib/build.js models/dragon_vrip.ply 1.js",
-    "res2": "node lib/build.js models/dragon_vrip_res2.ply 2.js",
-    "res3": "node lib/build.js models/dragon_vrip_res3.ply 3.js",
-    "res4": "node lib/build.js models/dragon_vrip_res4.ply 4.js",
-    "clean": "rm models/*.ply"
+    "res1": "node lib/build.js models/dragon_vrip.ply.gz 1.js",
+    "res2": "node lib/build.js models/dragon_vrip_res2.ply.gz 2.js",
+    "res3": "node lib/build.js models/dragon_vrip_res3.ply.gz 3.js",
+    "res4": "node lib/build.js models/dragon_vrip_res4.ply.gz 4.js"
   },
   "author": "Hugh Kennedy <hughskennedy@gmail.com> (http://hughsk.io/)",
   "dependencies": {
